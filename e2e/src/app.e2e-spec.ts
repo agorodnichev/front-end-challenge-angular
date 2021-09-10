@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('angular-challenge app is running!');
+  it('should have as title', async () => {
+    await page.navigateTo();
+    await expect(page.getBrowserTitle()).toEqual('Angular Challenge');
   });
 
   afterEach(async () => {
